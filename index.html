@@ -73,7 +73,7 @@
             <button class="tab-btn active" onclick="showTab('investment')">Ⅰ、前期咨询</button>
             <button class="tab-btn" onclick="showTab('design')">Ⅱ、勘察设计</button>
             <button class="tab-btn" onclick="showTab('construction')">Ⅲ、建设管理</button>
-            <button class="tab-btn" onclick="showTab('summary')">Ⅴ、费用汇总</button>
+            <button class="tab-btn" onclick="showTab('summary')">Ⅳ、费用汇总</button>
         </div>
 
         <div id="investment" class="tab-content active">
@@ -88,7 +88,7 @@
                             <input type="number" id="agencyCost" placeholder="请输入工程总概算" step="0.01">
                         </div>
                         <div class="form-group">
-                            <label>优惠折扣（%）</label>
+                            <label>折扣率（%）</label>
                             <input type="number" id="agencyDiscount" value="100" step="1">
                         </div>
                         <button class="btn btn-block" onclick="calculateAgencyFee()">计算代建费</button>
@@ -130,7 +130,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>优惠折扣（%）</label>
+                            <label>折扣率（%）</label>
                             <input type="number" id="feasibilityDiscount" value="100" step="1" placeholder="如：80表示8折">
                         </div>
                         <button class="btn btn-block" onclick="calculateFeasibilityFee()">计算可研编制费</button>
@@ -148,7 +148,7 @@
                             <input type="number" id="waterCost" placeholder="请输入主体土建投资" step="0.01">
                         </div>
                         <div class="form-group">
-                            <label>优惠折扣（%）</label>
+                            <label>折扣率（%）</label>
                             <input type="number" id="waterDiscount" value="100" step="1" placeholder="如：80表示8折">
                         </div>
                         <button class="btn btn-block" onclick="calculateWaterFee()">计算水保编制费</button>
@@ -174,7 +174,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>优惠折扣（%）</label>
+                            <label>折扣率（%）</label>
                             <input type="number" id="waterMonDiscount" value="100" step="1" placeholder="如：80表示8折">
                         </div>
                         <button class="btn btn-block" onclick="calculateWaterMonFee()">计算水保监测费</button>
@@ -226,7 +226,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>优惠折扣（%）</label>
+                            <label>折扣率（%）</label>
                             <input type="number" id="waterResDiscount" value="100" step="1" placeholder="如：80表示8折">
                         </div>
                         <button class="btn btn-block" onclick="calculateWaterResFee()">计算水资源论证费</button>
@@ -260,7 +260,7 @@
                             </div>
                             <div class="col">
                                 <div class="form-group">
-                                    <label>优惠折扣（%）</label>
+                                    <label>折扣率（%）</label>
                                     <input type="number" id="surveyDiscount" value="100" step="5">
                                 </div>
                             </div>
@@ -274,7 +274,7 @@
 
                     <div class="calculator-card">
                         <h3>2.2 工程设计费</h3>
-                        <div class="note">计算依据：计价格〔2002〕10号 | 收费基价×专业调整×复杂调整×附加调整×优惠折扣</div>
+                        <div class="note">计算依据：计价格〔2002〕10号 | 收费基价×专业调整×复杂调整×附加调整×折扣率</div>
                         <div class="form-group">
                             <label>工程费用（万元）</label>
                             <input type="number" id="designCost" placeholder="请输入工程费用" step="0.01">
@@ -330,7 +330,7 @@
                             </div>
                             <div class="col">
                                 <div class="form-group">
-                                    <label>优惠折扣（%）</label>
+                                    <label>折扣率（%）</label>
                                     <input type="number" id="designFloat" value="100" step="5">
                                 </div>
                             </div>
@@ -351,7 +351,7 @@
                 <div class="calculator-grid">
                     <div class="calculator-card">
                         <h3>3.1 工程监理费</h3>
-                        <div class="note">计算依据：发改价格〔2007〕670号 | 收费基价×专业调整×复杂调整×高程调整×优惠折扣</div>
+                        <div class="note">计算依据：发改价格〔2007〕670号 | 收费基价×专业调整×复杂调整×高程调整×折扣率</div>
                         <div class="form-group">
                             <label>工程概算（万元）</label>
                             <input type="number" id="supervisionCost" placeholder="请输入工程概算" step="0.01">
@@ -410,7 +410,7 @@
                             </div>
                             <div class="col">
                                 <div class="form-group">
-                                    <label>优惠折扣（%）</label>
+                                    <label>折扣率（%）</label>
                                     <input type="number" id="supervisionFloat" value="100" step="5">
                                 </div>
                             </div>
@@ -438,7 +438,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>优惠折扣（%）</label>
+                            <label>折扣率（%）</label>
                             <input type="number" id="biddingDiscount" value="0" step="1">
                         </div>
                         <button class="btn btn-block" onclick="calculateBiddingFee()">计算招标代理费</button>
@@ -480,7 +480,7 @@
 
         <div id="summary" class="tab-content">
             <div class="summary">
-                <h2>Ⅴ、费用汇总</h2>
+                <h2>Ⅳ、费用汇总</h2>
                 <div class="summary-item"><span>代建费</span><span id="summaryAgency">0.00 万元</span></div>
                 <div class="summary-item"><span>可行性研究报告编制费</span><span id="summaryFeasibility">0.00 万元</span></div>
                 <div class="summary-item"><span>水土保持方案编制费</span><span id="summaryWater">0.00 万元</span></div>
@@ -1080,7 +1080,7 @@
             let fee = basePrice * prof * complex * elev;
             detail += `<div class="step"><span class="step-title">第3步：计算收费基准价</span><br>基准价 = ${formatNum(basePrice)} × ${prof} × ${complex} × ${elev} = ${formatNum(fee)} 万元</div>`;
             
-            detail += `<div class="step"><span class="step-title">第4步：优惠折扣</span><br>优惠折扣：${float}%</div>`;
+            detail += `<div class="step"><span class="step-title">第4步：折扣率</span><br>折扣率：${float}%</div>`;
             
             fee = fee * (float / 100);
             detail += `<div class="step"><span class="step-title">第5步：计算最终监理费</span><br>监理费 = ${formatNum(basePrice * prof * complex * elev)} × ${float}% = ${formatNum(fee)} 万元</div>`;
@@ -1150,10 +1150,10 @@
             }
             
             const beforeDiscount = fee;
-            fee = fee * (1 - discount / 100);
+            fee = fee * (discount / 100);
             
             if (discount > 0) {
-                detail += `<div class="step"><span class="step-title">优惠折扣后</span><br>计算：${formatNum(beforeDiscount)} × (1 - ${discount}%) = ${formatNum(fee)} 万元</div>`;
+                detail += `<div class="step"><span class="step-title">折扣率后</span><br>计算：${formatNum(beforeDiscount)} × ${discount}% = ${formatNum(fee)} 万元</div>`;
             }
             
             results.bidding = fee;
@@ -1167,7 +1167,7 @@
             'bill': { name: '工程清单编制或审核', rates: [{limit: 500, rate: 0.0045}, {limit: 3000, rate: 0.0035}, {limit: 6000, rate: 0.0025}, {limit: 10000, rate: 0.0012}, {limit: Infinity, rate: 0.0005}], minFee: 0.3, hasReduce: false },
             'control': { name: '控制价编制', rates: [{limit: 500, rate: 0.0035}, {limit: 3000, rate: 0.0023}, {limit: 6000, rate: 0.0012}, {limit: 10000, rate: 0.0008}, {limit: Infinity, rate: 0.0005}], minFee: 0.3, hasReduce: false },
             'audit': { name: '工程结算审核', rates: [{limit: 500, rate: 0.005}, {limit: 3000, rate: 0.004}, {limit: 6000, rate: 0.0015}, {limit: 10000, rate: 0.0008}, {limit: Infinity, rate: 0.0003}], minFee: 0.3, hasReduce: true },
-            'whole': { name: '施工阶段全过程造价控制', rates: [{limit: 500, rate: 0.012}, {limit: 3000, rate: 0.009}, {limit: 6000, rate: 0.0075}, {limit: 10000, rate: 0.006}, {limit: Infinity, rate: 0.004}], minFee: 0.3, hasReduce: false },
+            'whole': { name: '施工阶段全过程造价控制', rates: [{limit: 500, rate: 0.12}, {limit: 3000, rate: 0.09}, {limit: 6000, rate: 0.075}, {limit: 10000, rate: 0.06}, {limit: Infinity, rate: 0.04}], minFee: 0.3, hasReduce: false },
             'final': { name: '竣工决算编制或审核', rates: [{limit: Infinity, rate: 0.003}], minFee: 0.3, hasReduce: false },
             'budget': { name: '工程预算编制', rates: [{limit: 500, rate: 0.005}, {limit: 3000, rate: 0.004}, {limit: 6000, rate: 0.0015}, {limit: 10000, rate: 0.0005}, {limit: Infinity, rate: 0.0002}], minFee: 0.3, hasReduce: false }
         };
@@ -1205,7 +1205,7 @@
                 
                 html += `<div class="col">
                             <div class="form-group">
-                                <label>优惠折扣（%）</label>
+                                <label>折扣率（%）</label>
                                 <input type="number" id="costConsultDiscount_${t}" value="${itemDiscount}" step="1" onchange="calculateCostConsultFee()">
                             </div>
                         </div>
@@ -1262,7 +1262,7 @@
                 fee = fee * (discount / 100);
                 
                 if (discount < 100) {
-                    itemDetail += `<div class="step"><span class="step-title">优惠折扣后</span><br>计算：${formatNum(beforeDiscount)} × ${discount}% = ${formatNum(fee)} 万元</div>`;
+                    itemDetail += `<div class="step"><span class="step-title">折扣率后</span><br>计算：${formatNum(beforeDiscount)} × ${discount}% = ${formatNum(fee)} 万元</div>`;
                 }
                 
                 itemDetail += `<div class="step"><span class="step-title">小计</span><br><strong>${formatNum(fee)} 万元</strong></div>`;
@@ -1291,7 +1291,7 @@
             fee = fee * (discount / 100);
             
             if (discount < 100) {
-                detail += `<div class="step"><span class="step-title">优惠折扣后</span><br>计算：${formatNum(beforeDiscount)} × ${discount}% = ${formatNum(fee)} 万元</div>`;
+                detail += `<div class="step"><span class="step-title">折扣率后</span><br>计算：${formatNum(beforeDiscount)} × ${discount}% = ${formatNum(fee)} 万元</div>`;
             }
             
             results.survey = fee;
@@ -1363,7 +1363,7 @@
             let fee = basePrice * prof * complex * additional;
             detail += `<div class="step"><span class="step-title">第3步：计算基本设计收费</span><br>基本收费 = ${formatNum(basePrice)} × ${prof} × ${complex} × ${additional} = ${formatNum(fee)} 万元</div>`;
             
-            detail += `<div class="step"><span class="step-title">第4步：优惠折扣</span><br>优惠折扣：${float}%</div>`;
+            detail += `<div class="step"><span class="step-title">第4步：折扣率</span><br>折扣率：${float}%</div>`;
             
             fee = fee * (float / 100);
             detail += `<div class="step"><span class="step-title">第5步：计算最终设计费</span><br>设计费 = ${formatNum(basePrice * prof * complex * additional)} × ${float}% = ${formatNum(fee)} 万元</div>`;
